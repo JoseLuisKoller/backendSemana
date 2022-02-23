@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consigna 2</title>
+</head>
+<body>
+    <script>
+        // Declarar una función constructora llamada Usuario 
+        // que reciba: nombre (string), apellido (string), libros (array de objetos) y mascotas (array de strings).
+        class Usuario{
+            constructor (nombre, apellido, libros, mascotas){
+                this.nombre = nombre
+                this.apellido = apellido
+                this.libros = []
+                this.mascotas = []
+            }
+        
+
+        getFullName() {
+            return console.log(`El nombre completo del usuario es ${nombre} ${apellido}`)
+        }
+
+        addMascota(mascota) {
+            Usuario.mascotas.push(mascota)
+        }
+
+        getMascotas() {
+            returnconsole.log(`El usuario posee ${Usuario.mascotas.length()} mascotas`)
+        }
+
+        addBook(book, author) {
+            Usuario.libros.push({nombre: book, autor: author})
+        }
+
+        getBooks() {
+            for(let i = 0 ; i< Usuario.libros; i++){
+                console.log(Usuario.libros[i].nombre)
+            }
+        }
+    }
+    let usuario = new Usuario("Jose Luis", "Koller", [{nommbre: "Harry Potter", autor: "JK Rowling"}], ["Sammy"])
+    </script>
+</body>
+</html>
