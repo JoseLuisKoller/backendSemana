@@ -1,14 +1,13 @@
 import fs from "fs";
 
-class Archivo {
+export default class Archivo {
   constructor(path) {
     this.path = path;
   }
 
-  readFile = async () => {
+  leerArchivo = async () => {
     try {
       let content = await fs.promises.readFile(this.path, "utf-8");
-      console.log(content);
       return content;
     } catch (error) {
       console.log([]);
